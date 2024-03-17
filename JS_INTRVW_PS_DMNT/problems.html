@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problems</title>
+  </head>
+  <body>
+    <script>
+      //Find missing multiple numbers in ginven array
+
+      /*  const missingFunction = (arr, ln) => {
+                          let obj = {};
+                          let missingArry = []; // for op in array
+                          let missingNumber = "";
+
+                          for (num of arr) {
+                            obj[num] = num;
+                          }
+
+                          for (i = 1; i < ln; i++) {
+                            if (obj[i] == undefined) {
+                              missingNumber += i + " ";
+                            }
+                          }
+                          return `${missingNumber} are missing numbers in given array`;
+                        };
+
+                        console.log(missingFunction([5, 4, 3], 5)); */
+      //------------------------------------------------------
+      // Sort an array in even and odd number
+      /*   let arr = [5, 4, 3];
+                        console.log(arr);
+
+                        arr.sort((a, b) => {
+                          if (a > b) return 1;
+                          else return -1;
+                        });
+
+                        console.log(arr); */
+
+      /* let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+                        console.log(arr);
+
+                        arr.sort((a, b) => {
+                          if (a % 2 != b % 2) {
+                            return a % 2 == 0 ? -1 : 1;
+                          } else {
+                            return a > b ? 1 : -1;
+                          }
+                        });
+
+                        console.log(arr); */
+      //------------------------------------------------------
+      //Find longest string of array of strings and  same multiple longest strings
+
+      /* let arStr = ["HTML", "CSS", "JAVASCRIPT", "REACT JS", "BHANUPRAKA"];
+
+                  let largestStr = arStr[0].length;
+
+                  for (i = 0; i < arStr.length; i++) {
+                    let cl = arStr[i].length;
+                    if (largestStr < cl) {
+                      largestStr = cl;
+                    }
+                  }
+                  console.log(largestStr); */
+      //------------------------------------------------------
+
+      // Sort Binary Array
+      let arr = [1, 0, 1, 1, 0, 0, 1, 0];
+
+      console.log(arr);
+      let zcount = 0;
+
+      for (ele of arr) {
+        if (ele == 0) {
+          zcount++;
+        }
+      }
+      for (i = 0; i < zcount; i++) {
+        arr[i] = 0;
+      }
+
+      for (i = zcount; i < arr.length; i++) {
+        arr[i] = 1;
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>easy level</title>
+  </head>
+  <body>
+    <script>
+      /*
+ (1)Creat a function that take two numbers as arguments and returns their sum.
+
+                        let sumOfTwoNumbers = (a, b) => a + b;
+                                                                                                 console.log(sumOfTwoNumbers(5, 3));
+                                                                                                   -------------------------------------------------------------------------------------------------------------------------*/
+      /* (2) Write a function that takes an integer minutes and converts it to seconds.
+
+                                                                                                   let minuteToSeconds = (minutes) => {
+                                                                                                     const Seconds = minutes * 60;
+                                                                                                     return Seconds + " " + "seconds";
+                                                                                                   };
+
+                                                                                                   console.log(minuteToSeconds(5));
+                                                                                                   -------------------------------------------------------------------------------------------------------------------------*/
+      /*(3) Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+                                                                                                   let incrementNumber = (IncrementbyOne) => {
+                                                                                                     return IncrementbyOne + 1;
+                                                                                                   };
+                                                                                                   console.log(incrementNumber(5));
+                                                                                                   ------------------------------------------------------------------------------------------------------------------------*/
+      /* (4)Create a function that takes the age in years and returns the age in days.
+
+                                                                                                   let ageinYearsTodays = (age) => {
+                                                                                                     const days = age * 365;
+                                                                                                     return days;
+                                                                                                   };
+
+                                                                                                   console.log(ageinYearsTodays(24)); */
+      /* (5) Create a function that takes voltage and current and returns the calculated power.
+
+                                                                                                   let powerByVoltageandCurrent = (voltage, current) => {
+                                                                                                     const power = voltage * current;
+                                                                                                    , return power;
+                                                                                                   };
+                                                                                                   console.log(powerByVoltageandCurrent(55, 12));
+                                                                                                   -------------------------------------------------------------------------------------------------------------------------*/
+      /*
+                                                                                                      (6).Write a function that returns the string "something" joined with a space " " and the given argument a.
+
+                                                                                                   let bhanu = (Str, a) => {
+                                                                                                     returnedString = Str + " " + a;
+                                                                                                     return returnedString;
+                                                                                                   };
+
+                                                                                                   console.log(bhanu("SriRam", "SriKrishn")); */
+
+      /*
+                                                                                                   (7)Create a function that takes two arguments. Both arguments are integers, a and b.
+                                                                                                   Return true if one of them is 10 or if their sum is 10.
+
+                                                                                                   let trueOrFalse = (a, b) => {
+                                                                                                     op = a === 10 || b == 10 || a + b == 10;
+                                                                                                     return op;
+                                                                                                   };
+
+                                                                                                   console.log(trueOrFalse(10, 0));
+                                                                                                   ------------------------------------------------------------------------------------------------------------------------------*/
+      /*  (8) Create a function that takes two strings as arguments and
+                                                                                                     returns either true or false depending on whether the total number of characters in the first string is equal
+                                                                                                      to the total number of characters in the second string.
+                                                                                                   ,
+                                                                                                   let str = (str1, str2) => {
+                                                                                                     if (str1.length === str2.length) {
+                                                                                                       return true;
+                                                                                                     } else {
+                                                                                                       return false;
+                                                                                                     }
+                                                                                                   };
+
+                                                                                                   console.log(str("ram", "lal"));
+                                                                                                   ------------------------------------------------------------------------------------------------------------------------------*/
+      /* (9) Create a function that takes a name and returns a greeting in the form of a string.
+                                                                                                    Don't use a normal function, use an arrow function.
+
+                                                                                                   var greetingUser = (greet) => {
+                                                                                                     return `Jai Shri Ram ${greet} welcome `;
+                                                                                                   };
+
+                                                                                                   console.log(greetingUser("Bhanuprakash"));
+                                                                                                   ------------------------------------------------------------------------------------------------------------------------------*/
+      /*(10) Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+                                                                                                   let strNum = "(";
+                                                                                              let NumberFunction = (numberArray) => {
+                                                                                                     for (i = 0; i < numberArray.length; i++) {
+                                                                                                       // console.log(numberArray[i]);
+                                                                                                       strNum += numberArray[i];
+                                                                                                       // console.log(strNum);
+                                                                                                       if (i === 2) {
+                                                                                                         strNum += ")" + " ";
+                                                                                                         // console.log(strNum);
+                                                                                                       }
+                                                                                                       if (i === 5) {
+                                                                                                         strNum += "-";
+                                                                                                       }
+                                                                                                     }
+                                                                                                   };
+                                                                                                   NumberFunction([9, 9, 9, 9, 9, 9, 9, 9, 9, 9]);
+                                                                                                   console.log(strNum);
+                                                                                                   let a = "" + 9;
+                                                                                                   console.log(a);
+                                                                                                   console.log(a + 9);
+                                                                                                   console.log(typeof a);
+                                                                                                   // WHEN WE ASSIGN 0  AND ADD IT GIVES SUM || WHEN WE ASSIGN EMPTYSTRING AND ADD IT GIVES STRING(concatination)   */
+
+      /* (11) Create a function that returns an array of strings sorted by length in ascending order.
+                                                                                                   Example:
+                                                                                                   sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+
+
+                                                                                                   let sortArr = (arr) => {
+                                                                                                     for (i = 0; i < arr.length; i++) {
+                                                                                                       for (j = i + 1; j < arr.length; j++) {
+                                                                                                         if (arr[i] > arr[j]) {
+                                                                                                           var temp = arr[i];
+                                                                                                           arr[i] = arr[j];
+                                                                                                           arr[j] = temp;
+                                                                                                         }
+                                                                                                       }
+                                                                                                     }
+                                                                                                     return arr;
+                                                                                                   };
+
+                                                                                                   console.log(sortArr(["a", "ccc", "dddd", "bb"]));
+                                                                                             // console.log(sortArr);
+                                                                                             // console.log(arr); */
+      //-----------------------------------------------------------------------------------------------------------------------------------------
+      /* (12) Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+                                                                                             Example:
+                                                                                             findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
+
+                                                                                      let a = [
+                                                                                        [4, 2, 7, 1],
+                                                                                        [20, 70, 40, 90],
+                                                                                        [1, 2, 0],
+                                                                                      ];
+
+                                                                                let a = [
+                                                                                  [4, 2, 7, 1],
+                                                                                  [20, 70, 40, 90],
+                                                                                  [1, 2, 0],
+                                                                                ];
+
+                                                                                // debugger;
+
+                                                                                const MultipleArray = (a) => {
+                                                                                  let largestArray = [];
+
+                                                                                  for (i = 0; i < a.length; i++) {
+                                                                                    let maxNum = a[i][0];
+                                                                                    for (j = 0; j < a[i].length; j++) {
+                                                                                      if (a[i][j] > maxNum) {
+                                                                                        maxNum = a[i][j];
+                                                                                      }
+                                                                                    }
+                                                                                    largestArray.push(maxNum);
+                                                                                  }
+                                                                                  return largestArray;
+                                                                                };
+                                                                                console.log(
+                                                                                  MultipleArray([
+                                                                                    [4, 2, 7, 1],
+                                                                                    [20, 70, 40, 90],
+                                                                                    [1, 2, 0],
+                                                                                  ])
+                                                                     //----------------------------------------------------------------------------------------------------------------------------------------------           );    */
+
+      /* (13).Create a function that takes an array of numbers and returns the second largest number.
+                                                                          Example:
+                                                                          secondLargest([10, 40, 30, 20, 50]) ➞ 40
+
+                                                                          // debugger;
+                                                                          const secondLargestNum = (arr) => {
+                                                                            let largest = arr[0];
+                                                                            let secondLargest = arr[0];
+
+                                                                            for (let i = 0; i < arr.length; i++) {
+                                                                              if (arr[i] > largest) {
+                                                                                secondLargest = largest;
+                                                                                largest = arr[i];
+                                                                              } else if (arr[i] > secondLargest) {
+                                                                                secondLargest = arr[i];
+                                                                              }
+                                                                            }
+
+                                                                            return secondLargest;
+                                                                          };
+
+                                                                          console.log(secondLargestNum([10, 40, 30, 20, 50]));  */
+      //----------------------------------------------------------------------------------------------------------------------------------------------------------------
+      /* (14) *Create a function that takes an array of items,
+                                                                           removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+                                                                    Example:
+
+                                                                    removeDups([1, 0, 1, 0]) ➞ [1, 0]
+
+                                                                    removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
+
+                                                              const FunctionArray = (DupArray) => {
+                                                                let removeDups = [];
+                                                                for (i = 0; i < DupArray.length; i++) {
+                                                                  if (!removeDups.includes(DupArray[i])) {
+                                                                    console.log(DupArray[i]);
+                                                                    removeDups.push(DupArray[i]);
+                                                                  }
+                                                                }
+                                                                return removeDups;
+                                                              };
+
+                                                              console.log(FunctionArray([1, 0, 1, 0]));
+                                                              console.log(FunctionArray(["The", "Big", "Cat"])); */
+
+      //--------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(15)  Create a function that takes an array of integers as an argument and returns a unique number from that array.
+                                                              All numbers except unique ones have the same number of occurrences in the array.
+
+                                                        Example:
+
+                                                        findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
+
+                                                        const uniqueNumber = (array) => {
+                                                          let uniqueArray = null;
+                                                          for (let i = 0; i < array.length; i++) {
+                                                            let count = 0;
+                                                            for (let j = 0; j < array.length; j++) {
+                                                              if (array[i] === array[j]) {
+                                                                count++;
+                                                              }
+                                                            }
+                                                            if (count === 1) {
+                                                              uniqueArray = array[i];
+                                                            }
+                                                          }
+                                                          return uniqueArray;
+                                                        };
+
+                                                        console.log(uniqueNumber([2, 2, 2, 3, 4, 4, 4])); */
+
+      /* (16) Create a function that takes two strings as arguments and
+                                                        returns the number of times the first string (the single character) is found in the second string.
+                                                  Example:
+
+                                                  charCount("c", "Chamber of secrets") ➞ 1
+
+                                                  const functionString = (str1, str2) => {
+                                                    let count = 0;
+
+                                                    for (i = 0; i < str1.length; i++) {
+                                                      for (j = 0; j < str2.length; j++) {
+                                                        if (str1[i] === str2[j]) {
+                                                          count++;
+                                                        }
+                                                      }
+                                                    }
+                                                    return count;
+                                                  };
+
+                                                  console.log(functionString("c", "Chamber of secrets")); * /
+                                                  //-------------------------------------------------------------------------------------------------------------------------------------------------
+                                            /* (17) Create a function that takes a string and returns the number (count) of vowels contained within it.
+                                            Example:
+
+                                            countVowels("Celebration") ➞ 5
+
+                                            // without using methods
+                                            const functionVowel = (countVowels) => {
+                                              let count = 0;
+                                              let vowels = "aeiouAEIOU";
+
+                                              for (let i = 0; i < countVowels.length; i++) {
+                                                for (let j = 0; j < vowels.length; j++) {
+                                                  if (countVowels[i] === vowels[j]) {
+                                                    count++;
+                                                  }
+                                                }
+                                              }
+                                              return count;
+                                            };
+
+                                            console.log(functionVowel("bhanuprakash"));
+
+                                            // with using methods
+                                            const methodFunctionVowels = (countVowels) => {
+                                              let count = 0;
+                                              let vowels = "aeiouAEIOU";
+
+                                              for (let i = 0; i < countVowels.length; i++) {
+                                                if (vowels.includes(countVowels[i])) {
+                                                  count++;
+                                                }
+                                              }
+                                              return count;
+                                            };
+
+                                            console.log(methodFunctionVowels("bhanuprakash")); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(18) Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+                                      Example
+                                      reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
+
+                                      const functionSmallCapitaLetter = (Converter) => {
+                                        let SmallCapital = "";
+                                        for (i = 0; i < Converter.length; i++) {
+                                          if (Converter[i] === Converter[i].toUpperCase()) {
+                                            SmallCapital += Converter[i].toLowerCase();
+                                          } else {
+                                            SmallCapital += Converter[i].toUpperCase();
+                                          }
+                                        }
+                                        return SmallCapital;
+                                      };
+
+                                      console.log(functionSmallCapitaLetter("Happy Birthday"));  */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(19)  Take one integer n, loop till n and pass each value to a function,
+                                      create a function that takes one integer parameter, and multiply with 2 in every integer.
+
+                                			Input:      n=5
+                                			Output:   2 4 6 8 10
+
+                                			Explanation:  Loop start with 1 go till 5 bcoz n=5
+                                					1 x 2 =2, 2 x 2=4, 3 x 2=6 …..etc
+
+                                const IntegerLoop = (n) => {
+                                  let conCat = "";
+                                  for (i = 1; i <= n; i++) {
+                                    multiple = i * 2;
+                                    conCat += multiple + " ";
+                                  }
+                                  return conCat;
+                                };
+
+                                console.log(IntegerLoop(5)); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(20)  Create Function that will take one parameter and return type of the data.
+
+                             Input:       500
+                             Output:     Integer
+
+                             Input:       Coding
+                             Output:    String
+
+                             const dataType = (data) => {
+                               if (typeof data == "number") {
+                                 return "integer";
+                               } else {
+                                 return typeof data;
+                               }
+                             };
+
+                             console.log(dataType(55));  */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /* (21)Program to find greatest of three numbers(using ternery operator).
+
+                          Input:  4 8 2
+                          Output: 8 is gretest
+
+                          const ternaryOperator = (num1, num2, num3) => {
+                            let greatest =
+                              num1 > num2 && num1 > num3
+                                ? `${num1} is greatest`
+                                : num2 > num3
+                                ? `${num2} is greatest`
+                                : `${num3} is greatest`;
+                            return greatest;
+                          };
+                          console.log(ternaryOperator(4, 8, 2)); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /* 22 . Program to find factorial of number.
+
+                       Input: n=5
+                       Output: 120
+
+                       Explanation: 5 x 4 x 3 x 2 x 1 = 120
+
+                       const factorialofGivenNumber = (n) => {
+                         let f = 1;
+                         for (let i = n; i > 0; i--) {
+                           f *= i;
+                         }
+                         return f;
+                       };
+
+                       console.log(factorialofGivenNumber(5)); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(23) arrange numbers in ascending order
+                 			Input: [2,3,1,5,4]
+                 			Output: [1,2,3,4,5]
+                 		        Sort the Array using loop only(you can not use predefined function).
+
+                       const functionsAscendingNumbers = (arr) => {
+                         for (i = 0; i < arr.length; i++) {
+                           for (j = i + 1; j < arr.length; j++) {
+                             temp = 0;
+                             if (arr[i] > arr[j]) {
+                               temp = arr[i];
+                               arr[i] = arr[j];
+                               arr[j] = temp;
+                             }
+                           }
+                         }
+                         return arr;
+                       };
+
+                       console.log(functionsAscendingNumbers([2, 3, 1, 5, 4])); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /* (24) Print Patten using loop.
+
+            		1
+            		1 2
+            		1 2 3
+            		1 2 3 4
+             		1 2 3 4 5*/
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(25)
+
+            Program to Calculate the Power of a Number(using loop only).
+
+            		Input: n=5, p=3
+            		Output: 5 ^ 3 = 125
+            		Explanation: 5 x 5 x 5 = 125
+
+
+
+
+            const powerOfNumber = (n, p) => {
+              for (i = 0; i <= n; i++) {
+                var result = n ** 3;
+                break;
+              }
+
+              return result;
+            };
+
+            console.log(powerOfNumber(5, 3));
+
+      // Method 2
+
+       const powerOfNumber = (n, p) => {
+        let result = 1;
+        for (let i = 0; i < p; i++) {
+          result *= n;
+        }
+        return result;
+      };
+
+      console.log(powerOfNumber(5, 3)); // Output: 125
+
+
+            */
+
+      /* (26) Program to Check Whether a Number is Prime or Not
+
+                 			Input: 9
+                 			Output: 9 is not a prime no
+
+                 			Input: 7
+                 			Output : 7 is a prime no
+
+                 const isPrimeorNot = (p) => {
+                   let count = 0;
+                   for (i = 2; i < p; i++) {
+                     if (p % i === 0) {
+                       count++;
+                       return `${p} is not a prime number`;
+                       break;
+                     }
+                   }
+
+                   if (count == 0) {
+                     return `${p} is a prime number`;
+                   }
+                 };
+
+                 console.log(isPrimeorNot(3));  */
+
+      // using while loop
+
+      /*  const PrimeFunction = (p) => {
+              count = 0;
+              i = 2;
+
+              while (p % i === 0) {
+                count++;
+                return `${p} is not a prime number`;
+                i++;
+                break;
+              }
+
+              if (count === 0) {
+                return `${p} is a prime number`;
+              }
+            };
+
+            console.log(PrimeFunction(3)); */
+
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(27) Program to find LCM of two numbers using while loop
+
+      			Input: 15 50
+      			Output: Lcm of 15 and 50 is 150.
+
+            const LcmOfGivenNumber = (num1, num2) => {
+              let max = num1 > num2 ? num1 : num2;
+              let lcm = max;
+
+              while (true) {
+                if (lcm % num1 === 0 && lcm % num2 === 0) {
+                  break;
+                }
+                lcm++;
+              }
+              return lcm;
+            };
+
+            console.log(LcmOfGivenNumber(15, 50));  */
+
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(28) Program to Display Characters from A to Z Using Loop with count.
+
+      			Output: A1 B2 C3 D4 E5 F6 ……. Z26
+
+            let AtoZ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let Output = "";
+            let count = 0;
+
+            for (i = 0; i < AtoZ.length; i++) {
+              if (!Output.includes(AtoZ[i])) {
+                count++;
+                Output += AtoZ[i] + count + " ";
+              }
+            }
+            console.log(Output); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /*(29) Program to find a missing number
+
+      			Input:  n=5(length of array), arr= [5,3,1,4]
+      			Output: 2 is missing
+
+      		Using loop only(you can not use predefined function) 
+
+      const missingNumber = (arr, n) => {
+        let sum = 0;
+        for (ele of arr) {
+          sum += ele;
+        }
+        let actual = (n * (n + 1)) / 2;
+        return `${actual - sum} is missing`;
+      };
+
+      console.log(missingNumber([5, 4, 3, 1], 5)); */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(30)  Program to count vowels and consonants in a given String.
+
+      			Input: i am ram
+      			Output: 3 vowels 3 consonants. 
+
+      let str = "i am ram";
+      let vowels = "aeiouAEIOU";
+      let vCount = 0;
+      let cCount = 0;
+      for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+          vCount++;
+        } else if (str[i] !== " ") {
+          cCount++;
+        }
+      }
+
+      console.log(`${vCount} vowels ${cCount} consonants`);  */
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(31)program to insert  the elements of an array for specific index.
+
+			Input: [1,2,3,4,5,7,8,9,10] , index=5
+			Output: [1,2,3,4,5,6,78,9,10] 
+
+      let arr = [1, 2, 3, 4, 5, 7, 8, 9, 10];
+      arr.splice(5, 2);
+      // console.log(arr);
+      arr.splice(5, 0, 6, 78);
+      // console.log(arr);  */
+
+      //---------------------------------------------------------------------------------------------------------------------------------------
+
+      /*(32) Reverse a number using while Loop
+			Input: 123
+			// Output: 321
+      debugger;
+      const reverseNumber = (num, rev) => {
+        while (num != 0) {
+          rev = rev * 10 + (num % 10);
+          console.log(num, "num%10");
+          num = parseInt(num / 10);
+          console.log(num, "num/10");
+        }
+        return rev;
+      };
+      console.log(reverseNumber(123, 0));   */
+
+      //---------------------------------------------------------------------------------------------------------------------------------------
+      /* (33) Count occurrence of number:
+
+			Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+			Output: 7 present 2 times.
+      // console.log(document); 
+
+      const occurrenceOfNumber = (arr, n) => {
+        let count = 0;
+        for (i = 0; i < arr.length; i++) {
+          if (n === arr[i]) {
+            count++;
+          }
+        }
+        return `${n} present ${count} times`;
+      };
+
+      console.log(
+        occurrenceOfNumber([1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 10], 9)
+      ); */
+
+      //---------------------
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // o/p = Vamsi Avg:
+      // Given array
+      let a = [
+        { name: "Vamshi", mm: 20, em: 30, tm: 48 },
+        { name: "Bhanu", mm: 80, em: 60, tm: 28 },
+        { name: "Uday", mm: 30, em: 80, tm: 88 },
+      ];
+
+      for (i = 0; i < a.length; i++) {
+        // Calculate the total marks and average
+        let totalMarks = a[i].mm + a[i].em + a[i].tm;
+        let average = totalMarks / 3;
+
+        // Output the result
+        console.log(average.toFixed(1));
+        console.log(`${a[i].name} Avg: ${average.toFixed(1)}`);
+      }
+
+      /*  2
+          3 5
+          7 11 13 */
+
+      let p = 2;
+
+      let c = 0;
+
+      for (i = 2; i < p; i++) {
+        if (i % p == 0) {
+          c++;
+          console.log("It is not a prime number");
+          break;
+        }
+      }
+      if (c == 0) {
+        console.log("It is a prime number");
+      }
+      
+    </script>
+  </body>
+</html>

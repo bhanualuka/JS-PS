@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Manipulation</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        inner: {
+          nestedInner: {
+            mostInner: {
+              property: "value",
+            },
+          },
+        },
+      };
+      let updateObj = {
+        ...obj,
+        inner: {
+          ...obj.inner,
+          nestedInner: {
+            ...obj.inner.nestedInner,
+            mostInner: {
+              ...obj.inner.nestedInner.mostInner,
+              Land: "yours",
+            },
+          },
+        },
+      };
+      console.log(updateObj);
+    </script>
+  </body>
+</html>
